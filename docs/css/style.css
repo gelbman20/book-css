@@ -1,0 +1,175 @@
+html, body {
+  background-color: #c4bec6;
+}
+
+.book-wrapper {
+  margin: 5% auto;
+  max-width: 300px;
+  z-index: 1;
+  -webkit-perspective: 3000px;
+  perspective: 3000px;
+}
+
+.book-wrapper .book {
+  position: relative;
+  display: block;
+  width: 300px;
+  height: 424.5px;
+  border-radius: 2px 4px 4px 2px;
+  background: -webkit-linear-gradient(45deg, #DAD5DC 0%, #f2ebf4 100%);
+  background: -o-linear-gradient(45deg, #DAD5DC 0%, #f2ebf4 100%);
+  background: linear-gradient(45deg, #DAD5DC 0%, #f2ebf4 100%);
+  font-family: acumin-pro, sans-serif;
+  -webkit-box-shadow: 13px 13px 8px 0px rgba(151, 146, 153, 0.6);
+  -moz-box-shadow: 13px 13px 8px 0px rgba(151, 146, 153, 0.6);
+  box-shadow: 13px 13px 8px 0px rgba(151, 146, 153, 0.6);
+  font-weight: 400;
+  color: #2b2b2b;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transition: -webkit-transform .5s;
+  -moz-transition: -moz-transform .5s;
+  transition: -webkit-transform .5s;
+  -o-transition: transform .5s;
+  transition: transform .5s;
+  transition: transform .5s, -webkit-transform .5s;
+}
+
+.book-wrapper .book:hover {
+  -webkit-transform: rotate3d(0, 1, 0, 35deg);
+  -moz-transform: rotate3d(0, 1, 0, 35deg);
+  transform: rotate3d(0, 1, 0, 35deg);
+}
+
+.book-wrapper .book > div,
+.book-wrapper .front > div {
+  display: block;
+  position: absolute;
+}
+
+.book-wrapper .book img {
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.book-wrapper .front {
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transform-origin: 0% 50%;
+  -moz-transform-origin: 0% 50%;
+  -ms-transform-origin: 0% 50%;
+  transform-origin: 0% 50%;
+  -webkit-transition: -webkit-transform .5s;
+  -moz-transition: -moz-transform .5s;
+  transition: -webkit-transform .5s;
+  -o-transition: transform .5s;
+  transition: transform .5s;
+  transition: transform .5s, -webkit-transform .5s;
+  -webkit-transform: translate3d(0, 0, 20px);
+  -moz-transform: translate3d(0, 0, 20px);
+  transform: translate3d(0, 0, 20px);
+  z-index: 10;
+}
+
+.book-wrapper .front > div {
+  width: 300px;
+  height: 424.5px;
+}
+
+.book-wrapper .left-side {
+  width: 40px;
+  left: -20px;
+  height: 424.5px;
+  background-color: #e8e5ea;
+  -webkit-transform: rotate3d(0, 1, 0, -90deg);
+  -moz-transform: rotate3d(0, 1, 0, -90deg);
+  transform: rotate3d(0, 1, 0, -90deg);
+}
+
+.book-wrapper .front > div {
+  border-radius: 0 3px 3px 0;
+  -webkit-box-shadow: inset 4px 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 4px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.book-wrapper .front:after {
+  content: '';
+  position: absolute;
+  top: 1px;
+  bottom: 1px;
+  left: -1px;
+  width: 1px;
+}
+
+.book-wrapper .cover:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 10px;
+  bottom: 0;
+  width: 3px;
+  background: rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 1px 0 3px rgba(255, 255, 255, 0.1);
+  box-shadow: 1px 0 3px rgba(255, 255, 255, 0.1);
+}
+
+.book-wrapper .left-side-header {
+  width: 394.5px;
+  height: 40px;
+  color: #2b2b2b;
+  font-size: 15px;
+  line-height: 40px;
+  padding-right: 10px;
+  text-align: right;
+  -webkit-transform-origin: 0 0;
+  -moz-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transform: rotate(90deg) translateY(-40px);
+  -moz-transform: rotate(90deg) translateY(-40px);
+  -ms-transform: rotate(90deg) translateY(-40px);
+  transform: rotate(90deg) translateY(-40px);
+}
+
+.book-wrapper .cover {
+  background: -webkit-linear-gradient(45deg, #DAD5DC 0%, #f2ebf4 100%);
+  background: -o-linear-gradient(45deg, #DAD5DC 0%, #f2ebf4 100%);
+  background: linear-gradient(45deg, #DAD5DC 0%, #f2ebf4 100%);
+}
+
+.book-wrapper .left-side .left-side-header span:first-child {
+  font-weight: 400;
+  font-size: 13px;
+  padding-right: 20px;
+}
+
+.book-wrapper .left-side .left-side-header span:last-child {
+  font-family: acumin-pro, sans-serif;
+}
+
+@media (min-width: 640px) {
+  .book-wrapper {
+    max-width: 400px;
+  }
+  .book-wrapper .book {
+    width: 400px;
+    height: 566px;
+  }
+  .book-wrapper .front > div {
+    width: 400px;
+    height: 566px;
+  }
+  .book-wrapper .left-side {
+    height: 566px;
+  }
+  .book-wrapper .left-side-header {
+    width: 536px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
